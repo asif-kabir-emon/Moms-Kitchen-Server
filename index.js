@@ -13,7 +13,8 @@ app.get("/", (req, res) => {
   res.send("Mom's Kitchen Server is running");
 });
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@userc1.twqeubr.mongodb.net/?retryWrites=true&w=majority`;
+const uri = "mongodb://localhost:27017";
+// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@userc1.twqeubr.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -22,6 +23,16 @@ const client = new MongoClient(uri, {
 
 const run = async () => {
   try {
+    const foodCollection = client.db("MomsKitchen").collection("foods");
+
+    app.get("/foods", async (req, res) => {
+      const size = parseInt(req.query.size);
+      const query = {};
+      const cursor = foodCollection.find(query);
+      const foods = await cursor.limit(size).toArray();
+      const count = await foodCollection.estimatedDocumentCount();
+      res.send({ count, foods });
+    });
   } finally {
   }
 };

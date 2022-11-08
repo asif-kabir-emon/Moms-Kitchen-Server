@@ -1,0 +1,51 @@
+[
+  {
+    "food_name": "Chivito Uruguayo Sandwich",
+    "image": "https://www.themealdb.com/images/media/meals/n7qnkb1630444129.jpg",
+    "rating": 4.4,
+    "price": 14,
+    "detail": "Chivito is the national dish of Uruguay. It is a thin slice of tender cooked beefsteak, with mozzarella, ham, tomatoes, mayonnaise and black or green olives, and commonly also bacon and fried or hard-boiled eggs, served as a sandwich in a bun, often accompanied by French-fried potatoes. \nMain ingredients: Bun, churrasco beef, bacon, fried or hard-boiled eggs, ham, black or green olives, mozzarella, tomatoes, mayonnaise."
+  },
+  {
+    "food_name": "Börek",
+    "image": "https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg",
+    "rating": 4.5,
+    "price": 10,
+    "detail": "Borek or burek is a filled Anatolian, Balkan, Cypriot, Middle Eastern and Central Asian pie made of a thin flaky dough such as filo with a variety of fillings, such as meat, cheese, spinach or potatoes. \nMain ingredients: Flaky pastry (usually filo), various fillings."
+  },
+  {
+    "food_name": "Mushroom soup with buckwheat",
+    "image": "https://www.themealdb.com/images/media/meals/1ngcbf1628770793.jpg",
+    "rating": 4.8,
+    "price": 20,
+    "detail": "This Mushroom & Buckwheat Soup is a gluten-free version of mushroom barley soup. It's full of flavor, texture and will surely become a favorite! \nMain ingredients: Mushrooms, leeks, buckwheat groats."
+  },
+  {
+    "food_name": "Roti john",
+    "image": "https://www.themealdb.com/images/media/meals/hx335q1619789561.jpg",
+    "rating": 4.5,
+    "price": 12,
+    "detail": "Roti john is an omelette sandwich first believed to be made in Singapore during the 1960s or 1970s. It later became widely popular, spreading throughout the Malay Peninsula in present-day Malaysia and in modern-day Indonesia as street food. \nMain ingredients: Minced meat, onion, egg, tomato-chilli sauce and a baguette-type loaf."
+  },
+  {
+    "food_name": "Pancake",
+    "image": "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+    "rating": 4.9,
+    "price": 4,
+    "detail": "A pancake is a flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface such as a griddle or frying pan, often frying with oil or butter. It is a type of batter bread."
+  },
+  {
+    "food_name": "Wontons",
+    "image": "https://www.themealdb.com/images/media/meals/1525876468.jpg",
+    "rating": 5.0,
+    "price": 20,
+    "detail": "A wonton is a type of Chinese dumpling commonly found across regional styles of Chinese cuisine. It is also spelled wantan or wuntun in transliteration from Cantonese and wenden from Shanghainese."
+  },
+  {
+    "food_name": "Turkey Meatloaf",
+    "image": "https://www.themealdb.com/images/media/meals/ypuxtw1511297463.jpg",
+    "rating": 4.9,
+    "price": 14,
+    "detail": "Meatloaf is a dish of ground meat that has been combined with other ingredients and formed into the shape of a loaf, then baked or smoked. The final shape is either hand-formed on a baking tray, or pan-formed by cooking it in a loaf pan."
+  }
+]
