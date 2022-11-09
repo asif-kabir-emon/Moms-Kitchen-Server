@@ -24,6 +24,7 @@ const client = new MongoClient(uri, {
 const run = async () => {
   try {
     const foodCollection = client.db("MomsKitchen").collection("foods");
+    const reviewCollection = client.db("MomsKitchen").collection("reviews");
 
     app.get("/foods", async (req, res) => {
       const size = parseInt(req.query.size);
@@ -44,6 +45,20 @@ const run = async () => {
     app.post("/foods", async (req, res) => {
       const food = req.body;
       const add = await foodCollection.insertOne(food);
+      res.send(add);
+    });
+
+    app.get("/reviewsByFoodId/:id", async (req, res) => {
+      const foodID = req.params.id;
+      const query = { review_food_id: foodID };
+      const cursor = reviewCollection.find(query);
+      const reviews = await cursor.sort({ review_time: -1 }).toArray();
+      res.send(reviews);
+    });
+
+    app.post("/reviews", async (req, res) => {
+      const review = req.body;
+      const add = await reviewCollection.insertOne(review);
       res.send(add);
     });
   } finally {
