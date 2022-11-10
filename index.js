@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
   res.send("Mom's Kitchen Server is running");
 });
 
-const uri = "mongodb://localhost:27017";
-// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@userc1.twqeubr.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = "mongodb://localhost:27017";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@userc1.twqeubr.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -55,8 +55,7 @@ const run = async () => {
       const query = {};
       const cursor = foodCollection.find(query);
       const foods = await cursor.limit(size).toArray();
-      const count = await foodCollection.estimatedDocumentCount();
-      res.send({ count, foods });
+      res.send(foods);
     });
 
     app.get("/foods/:id", async (req, res) => {
@@ -88,12 +87,6 @@ const run = async () => {
     });
 
     app.get("/reviewsByUserId/:id", async (req, res) => {
-      // const email = req.params.email;
-      // const decoded = req.decoded;
-      // console.log("decoded ", decoded);
-      // if (decoded.email != email) {
-      //   res.status(403).send({ message: "Unauthorized Access" });
-      // }
       const id = req.params.id;
       const query = { reviewer_id: id };
       const cursor = reviewCollection.find(query);
