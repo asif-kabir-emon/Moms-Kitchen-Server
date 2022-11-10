@@ -42,7 +42,7 @@ const run = async () => {
     const foodCollection = client.db("MomsKitchen").collection("foods");
     const reviewCollection = client.db("MomsKitchen").collection("reviews");
 
-    app.get("jwt", async (req, res) => {
+    app.post("/jwt", (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.ACCESS_TOKEN, {
         expiresIn: "1h",
